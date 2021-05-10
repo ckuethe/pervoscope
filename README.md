@@ -13,7 +13,8 @@ Collaboration. Sharing screenshots of interesting signals. Getting advice about 
 
 # And the name?
 
-Because peeping on oscilloscopes over the internet. Like exposed security cameras and baby monitors.
+Because peeping on oscilloscopes over the internet is a great idea. Just like unauthed security
+cameras, baby monitors, and all that other crap that has no business being on the internet... :cursing_face: 
 
 On that note, maybe you don't want to expose this to the internet if you're analyzing secret squirrels.
 
@@ -28,7 +29,7 @@ interfere with your scope by stopping it at an inconvenient time.
 
 There's a systemd unit you can install to run pervoscope; the appropriate nginx, apache, or caddy
 reverse proxy configuration is beyond the scope of this document. Beyond that, this server only
-responds to [/, /ds1054z, or /rigol](blob/main/pervoscope.py#L104).
+responds to [/, /ds1054z, or /rigol](pervoscope.py#L104).
 
 ```
 usage: pervoscope.py [-h] [-p PORT] [-H HOST] [-o RATIO] [-k KEEPALIVE]
