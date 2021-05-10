@@ -1,0 +1,5 @@
+.*.swp
+.pyre
+.pyre_configuration
+.watchmanconfig
+__pycache__

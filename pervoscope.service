@@ -1,0 +1,19 @@
+[Unit]
+Description=Rigol Screenshot Server
+After=network.target
+
+[Service]
+User=nobody
+# Things to note:
+# if your scope is very busy (eg. big FFTs) it can take a couple of minutes to
+# return the screenshot. You may need to turn up your reverse proxy connection
+# timeout (300s is good).
+# Additionally, some scopes seem to forget their network configuration, or don't
+# respond to ARP. To mitigate this, this tool can periodically probe the scopes
+# HTTP server frequently enough to keep ARP and CAM tables up to date.
+ExecStart=/usr/local/bin/pervoscope --port 1054 --keepalive 120
+Type=simple
+WorkingDirectory=/tmp
+
+[Install]
+WantedBy=multi-user.target
